@@ -189,20 +189,7 @@ serem 3 classes).
 
 ---
 
-## 3. Arquivos de apoio do projeto
-
-- `planilha_ratos_R1_R7.xlsx` — mapeamento de rato → canal → área anatômica,
-  usado dinamicamente pelo pipeline de EDA (fase 10D) para permitir adicionar
-  novos ratos sem alterar código.
-- `Dicionario_de_dados_1.pdf` — dicionário de dados das variáveis do projeto.
-- `AnaPaulaDeCastroAraujo_Tese.pdf` — dissertação de mestrado que originou a
-  padronização da tarefa comportamental e fundamenta a hipótese do TCC.
-- `fncel171144260.pdf`, `fnbeh16970083.pdf` — artigos de referência sobre PAC
-  Theta-Gama e oscilações hipocampais, usados para embasar as escolhas
-  metodológicas (detecção de harmônicas, interpretação de slow vs. fast
-  gamma, etc.).
-
-## 4. Estado atual / próximos passos
+## 3. Estado atual / próximos passos
 
 - [x] Pipeline de pré-processamento do LFP (filtragem, downsample, remoção de
       ruído) — concluído (`eda_lfp`)
