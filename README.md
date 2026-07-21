@@ -79,6 +79,66 @@ atual, **19.285 linhas × 105 colunas**, contendo, por segundo (ou por trial,
 após a etapa de tendência), as features espectrais de cada área anatômica,
 identificadas por rato, condição (25%/50%/75%/NOR) e trial (T1–T4).
 
+#### Features criadas (por área anatômica / canal, salvas em `08_features/features.parquet`)
+
+Todas as colunas abaixo são calculadas **por área anatômica** (média dos
+canais bons daquela área) e prefixadas pelo nome da área (ex.:
+`CA1_pot_theta`, `DG_centroide_hz`).
+
+| Categoria | Feature (nome da coluna) | Descrição |
+|---|---|---|
+| **Identificação** | `rato`, `condicao`, `trial`, `stem`, `segundo` | Metadados de cada linha (1 linha = 1 segundo de gravação de 1 área) |
+| **Estatísticas temporais** (Fase 9) | `mean` | Média do sinal no segundo |
+| | `std` | Desvio-padrão do sinal |
+| | `rms` | Valor RMS (raiz da média quadrática) |
+| | `kurtosis` | Curtose (achatamento da distribuição) |
+| | `skewness` | Assimetria da distribuição |
+| | `pico_a_pico` | Amplitude pico-a-pico (max − min) |
+| | `pct_outlier_3s` | % de amostras além de 3 desvios-padrão da média |
+| **Potência espectral por banda** (Fase 10A, Welch) | `pot_delta` | Potência na banda Delta (1–4 Hz) |
+| | `pot_theta` | Potência na banda Theta (6–12 Hz) |
+| | `pot_beta` | Potência na banda Beta (13–30 Hz) |
+| | `pot_gamma_lento` | Potência na banda Gama Lento (25–55 Hz) |
+| | `pot_gamma_rapido` | Potência na banda Gama Rápido (65–110 Hz) |
+| **Razões entre bandas** (Fase 10A) | `theta_gamma_lento_ratio` | Razão Theta / Gama Lento |
+| | `theta_gamma_rapido_ratio` | Razão Theta / Gama Rápido |
+| | `delta_theta_ratio` | Razão Delta / Theta |
+| **Complexidade espectral** (Fase 10A) | `entropia_espectral` | Entropia espectral normalizada do PSD (0–1; mede o quão "espalhada" está a energia no espectro) |
+| **Frequência dominante** (Fase 10B) | `centroide_hz` | Centroide espectral — frequência média contínua (Hz), ponderada pela potência, na faixa 1–110 Hz |
+| **Controle metodológico do PAC** (Fase 10C) | `theta_peak_hz` | Frequência do pico espectral dominante dentro da banda Theta |
+| | `pac_sl_alerta_harmonicas` | Flag booleano: indica se uma harmônica (h3/h4) do pico Theta cai dentro da faixa de Gama Lento (±3 Hz) — usado para decidir qual PAC é mais confiável para reportar |
+| **Acoplamento Fase-Amplitude (PAC)** (Fase 12) | `pac_mi_theta_gamma_lento` | Índice de Modulação (MI, Tort et al. 2010) do acoplamento Theta (fase) → Gama Lento (amplitude) |
+| | `pac_mi_theta_gamma_rapido` | Índice de Modulação (MI) do acoplamento Theta (fase) → Gama Rápido (amplitude) — hipótese principal do TCC |
+| **Normalização dentro do rato** (Fase 13, calculada sob demanda) | `<feature>_zscore` | Z-score de cada coluna de potência, usando a sessão/rato inteiro como baseline |
+| **Dinâmica temporal por trial** (Pós-pipeline) | `<feature>_tendencia` | Slope (inclinação) da regressão linear do z-score da feature ao longo do tempo dentro do trial — resume se a potência sobe ou desce durante a sessão; substitui as colunas `_zscore` por segundo no `features_all` final; não calculada para sessões `NOR` |
+
+> As colunas de potência (`pot_*`), razões e centroide são calculadas tanto no
+> nível "PSD médio da área" quanto, na Fase 10D, agregadas a partir do sinal
+> médio dos canais bons de cada área — por isso os nomes finais em
+> `features_all` seguem o padrão `<área>_<feature>` (ex.: `CA3_pot_theta`,
+> `LEC_theta_gamma_rapido_ratio`, `PRH_pac_mi_theta_gamma_rapido`).
+
+#### Features derivadas na etapa de modelagem (`Pipeline_RF_LogReg_XGB.ipynb`)
+
+Antes de treinar os modelos, o notebook de ML faz uma **engenharia de
+atributos adicional**, transformando o formato longo (1 linha por segundo)
+em formato largo (1 linha por `arquivo × área`):
+
+| Feature derivada | Descrição |
+|---|---|
+| `<feature>_mean` | Média da feature dentro de cada janela percentual do trial |
+| `<feature>_std` | Desvio-padrão da feature dentro da janela |
+| `<feature>_min` | Valor mínimo da feature dentro da janela |
+| `<feature>_max` | Valor máximo da feature dentro da janela |
+| `<feature>_median` | Mediana da feature dentro da janela |
+
+Essas estatísticas são calculadas para **cada uma das features espectrais
+listadas acima**, dentro de janelas percentuais da gravação (parametrizadas
+por `passo_pct`, testado entre 5% e 50% da duração do trial — ex.: 10 janelas
+de 10% cada). Em seguida, atributos redundantes (correlação absoluta > 0,8)
+são removidos, e o `passo_pct` ótimo é escolhido por busca de hiperparâmetros
+específica para cada modelo (RF, LogReg, XGBoost).
+
 ---
 
 ### 2.2 `Pipeline_RF_LogReg_XGB.ipynb` — Modelagem (Machine Learning)
