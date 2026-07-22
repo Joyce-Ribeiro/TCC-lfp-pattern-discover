@@ -1,0 +1,21 @@
+R1 - Sessao 25% - SEM ARQUIVO (T1: SEM ARQUIVO | T2: SEM ARQUIVO | T3: SEM ARQUIVO | T4: SEM ARQUIVO)
+R1 - Sessao 50% - T1: CA3b | T3: CA3b
+R1 - Sessao 75% - T1: SEM ARQUIVO | T2: SEM ARQUIVO | T3: SEM ARQUIVO
+R2 - Sessao 25% - falta areas: nenhuma
+R2 - Sessao 50% - falta areas: nenhuma
+R2 - Sessao 75% - falta areas: nenhuma
+R3 - Sessao 25% - T1: CA3b | T2: CA3b | T3: CA3b | T4: CA3b
+R3 - Sessao 50% - falta areas: nenhuma
+R3 - Sessao 75% - T3: CA3c, DGV | T4: CA3c
+R4 - Sessao 25% - falta areas: nenhuma
+R4 - Sessao 50% - falta areas: nenhuma
+R4 - Sessao 75% - T4: SEM ARQUIVO
+R5 - Sessao 25% - falta areas: nenhuma
+R5 - Sessao 50% - falta areas: nenhuma
+R5 - Sessao 75% - falta areas: nenhuma
+R7 - Sessao 25% - T3: CA3b
+R7 - Sessao 50% - T2: SEM ARQUIVO | T3: SEM ARQUIVO | T4: SEM ARQUIVO
+R7 - Sessao 75% - T1: CA3b | T2: CA3b
+R8 - Sessao 25% - falta areas: nenhuma
+R8 - Sessao 50% - SEM ARQUIVO (T1: SEM ARQUIVO | T2: SEM ARQUIVO | T3: SEM ARQUIVO | T4: SEM ARQUIVO)
+R8 - Sessao 75% - T3: CA3c, DGD, DGV
