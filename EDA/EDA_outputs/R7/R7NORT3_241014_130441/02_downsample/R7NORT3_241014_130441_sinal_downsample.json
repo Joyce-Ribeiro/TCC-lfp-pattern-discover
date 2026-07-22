@@ -1,0 +1,43 @@
+{
+  "stem": "R7NORT3_241014_130441",
+  "shape": [
+    16,
+    298500
+  ],
+  "fs": 1000,
+  "dtype": "float32",
+  "descricao": "Sinal LFP downsampled [N_CANAIS x N_amostras] float32",
+  "rato": "R7",
+  "condicao": "NOR",
+  "trial": "T3",
+  "acontencimento": "O rato ficou fazendo rearing na porta. Demorando a entrar. Fazendo Risq assement",
+  "canais_bons": [
+    0,
+    1,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15
+  ],
+  "canais_ativos_hardware": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}
