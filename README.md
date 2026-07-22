@@ -53,7 +53,7 @@ Principais decisões e etapas do pipeline (fases numeradas dentro do notebook):
 |------|-----------|
 | 0 | Imports, configurações globais e parâmetros |
 | 1 | Leitura dos arquivos `.int` + anotações do CSV de acompanhamento |
-| 2 | Exclusão do rato R8 (critério de exclusão do estudo) |
+| 2 | Exclusão de arquivos com falhas |
 | 2.5 | Filtro: mantém apenas trials de **Teste (T1–T4)**; descarta aquisição (A1–A4) |
 | 3 | Identificação de canais ruins (critério automático: RMS/kurtosis/std + anotações manuais no CSV) — canais são marcados, não removidos, nesta fase |
 | 4 | Inspeção visual do sinal bruto por canal |
