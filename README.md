@@ -188,19 +188,3 @@ confusão e `classification_report`, comparadas ao nível de chance (1/3, por
 serem 3 classes).
 
 ---
-
-## 3. Estado atual / próximos passos
-
-- [x] Pipeline de pré-processamento do LFP (filtragem, downsample, remoção de
-      ruído) — concluído (`eda_lfp`)
-- [x] Extração de features espectrais por área anatômica (Welch, centroide,
-      PAC, tendência) — concluído
-- [x] Consolidação do dataset `features_all` (19.285 × 105) — concluído
-- [x] Pipeline de modelagem multiclasse (RF, LogReg, XGBoost) com
-      Leave-One-Rat-Out, seleção de features e SHAP — implementado
-- [ ] Consolidar e interpretar os resultados finais por modelo e por área
-      anatômica para a redação do TCC
-- [ ] Redigir a discussão relacionando os achados de ML com a literatura de
-      PAC Theta-Gama e discriminação de objetos por similaridade
-
----
