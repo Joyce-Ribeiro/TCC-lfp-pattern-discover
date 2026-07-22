@@ -1,0 +1,17 @@
+canal,ruim,rms,std,kurt,motivo,fonte
+1,False,145.58085455266772,145.58083932934417,0.6144079610187778,,
+2,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+3,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+4,False,57.860741101615424,57.86056762523298,27.96733155190714,,
+5,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+6,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+7,False,53.33197988911149,53.331825173438105,35.221898012738144,,
+8,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+9,False,411.8370529772278,411.83698341163756,0.03204977379782026,,
+10,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+11,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+12,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+13,False,319.6780179837688,319.67799733460396,-0.24233417239464883,,
+14,False,302.3778301099009,302.3777843626156,0.5633770300231409,,
+15,True,0.0,0.0,,Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV),auto
+16,False,168.62333694014563,168.62332614055285,0.28143499796344695,,

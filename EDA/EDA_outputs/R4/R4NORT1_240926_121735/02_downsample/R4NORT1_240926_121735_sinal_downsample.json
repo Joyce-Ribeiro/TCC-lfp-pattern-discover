@@ -1,0 +1,30 @@
+{
+  "stem": "R4NORT1_240926_121735",
+  "shape": [
+    16,
+    182760
+  ],
+  "fs": 1000,
+  "dtype": "float32",
+  "descricao": "Sinal LFP downsampled [N_CANAIS x N_amostras] float32",
+  "rato": "R4",
+  "condicao": "NOR",
+  "trial": "T1",
+  "acontencimento": "",
+  "canais_bons": [
+    0,
+    6,
+    8,
+    12,
+    13,
+    15
+  ],
+  "canais_ativos_hardware": [
+    1,
+    7,
+    9,
+    13,
+    14,
+    16
+  ]
+}
