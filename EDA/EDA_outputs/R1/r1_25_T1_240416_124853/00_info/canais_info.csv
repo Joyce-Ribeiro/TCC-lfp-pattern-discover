@@ -1,0 +1,17 @@
+canal,ruim,rms,std,kurt,motivo,fonte
+1,True,89.81538735567905,89.81537936285942,456.74207265556964,"Saturação/artefato extremo (kurtosis=456.7 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+2,True,256.15614495634406,256.1561078202002,22.077207193957932,"Anotação CSV: ""Sinal ruim""",csv
+3,True,102.76962495071709,102.76961213135012,309.13119385171245,"Saturação/artefato extremo (kurtosis=309.1 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+4,True,90.07507209108702,90.07506257576529,881.505628248196,"Saturação/artefato extremo (kurtosis=881.5 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+5,True,91.16008194430637,91.160074020134,1084.883096371827,"Saturação/artefato extremo (kurtosis=1084.9 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+6,True,101.34701160390878,101.3469901764456,343.767357823089,"Saturação/artefato extremo (kurtosis=343.8 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+7,True,89.50098066879357,89.50097705659559,496.432542742542,"Saturação/artefato extremo (kurtosis=496.4 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+8,True,96.65848388065346,96.6584833290823,397.6834456386574,"Saturação/artefato extremo (kurtosis=397.7 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+9,True,91.61298111593614,91.61297648174254,502.0959255587724,"Saturação/artefato extremo (kurtosis=502.1 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+10,True,166.21612503419183,166.2160976168759,141.09348708203095,"Saturação/artefato extremo (kurtosis=141.1 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+11,True,68.1833686097051,68.18336638278679,1325.9897729608203,"Saturação/artefato extremo (kurtosis=1326.0 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+12,True,146.787734965795,146.7876172827596,70.03437019344004,"Saturação/artefato extremo (kurtosis=70.0 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+13,True,156.59940830938075,156.59931691769648,60.73523469130726,"Saturação/artefato extremo (kurtosis=60.7 > 50) | Anotação CSV: ""Sinal ruim""",csv+auto
+14,True,263.4711567682642,263.4710937244284,21.49573737136924,"Anotação CSV: ""Sinal ruim""",csv
+15,True,294.77392445372885,294.77387602623935,37.91972597796977,"Anotação CSV: ""Sinal ruim""",csv
+16,True,166.48878837979282,166.4886662733192,47.35998404607648,"Anotação CSV: ""Sinal ruim""",csv
