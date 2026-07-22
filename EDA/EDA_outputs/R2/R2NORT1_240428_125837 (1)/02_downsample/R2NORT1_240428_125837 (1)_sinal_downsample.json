@@ -1,0 +1,50 @@
+{
+  "stem": "R2NORT1_240428_125837 (1)",
+  "shape": [
+    16,
+    209040
+  ],
+  "fs": 1000,
+  "dtype": "float32",
+  "descricao": "Sinal LFP downsampled [N_CANAIS x N_amostras] float32",
+  "rato": "R2",
+  "condicao": "NOR",
+  "trial": "T1",
+  "acontencimento": "Derrubou objeto",
+  "canais_bons": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "canais_ativos_hardware": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}
