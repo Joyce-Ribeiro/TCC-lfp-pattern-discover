@@ -1,0 +1,32 @@
+{
+  "stem": "R5NORT2_241003_121631",
+  "shape": [
+    16,
+    237210
+  ],
+  "fs": 1000,
+  "dtype": "float32",
+  "descricao": "Sinal LFP downsampled [N_CANAIS x N_amostras] float32",
+  "rato": "R5",
+  "condicao": "NOR",
+  "trial": "T2",
+  "acontencimento": "",
+  "canais_bons": [
+    3,
+    10,
+    11,
+    12
+  ],
+  "canais_ativos_hardware": [
+    1,
+    2,
+    4,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}
