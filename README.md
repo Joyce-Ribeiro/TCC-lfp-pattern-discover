@@ -62,10 +62,10 @@ Principais decisões e etapas do pipeline (fases numeradas dentro do notebook):
 | 7 | Downsample do sinal (→ 1 kHz) |
 | 8 | Conversão do sinal para blocos por segundo |
 | 9 | Extração de features estatísticas por canal |
-| 10A | PSD por Welch (Hanning, janela de 1s, 50% overlap, NFFT=1024) + potência por banda |
-| 10B | Centroide espectral (frequência contínua por canal/segundo) |
-| 10D | Agregação do sinal por **área anatômica** (lida dinamicamente de `planilha_ratos_R1_R7.xlsx`, permitindo adicionar novos ratos sem alterar código) — a partir daqui as análises (Welch, harmônicas, espectrograma, centroide, PAC) passam a ser feitas por área, não por canal isolado |
-| 10C | Detecção do pico Theta real e de suas harmônicas — controle metodológico para o PAC (flag de alerta quando uma harmônica cai na faixa de Slow Gamma, seguindo Scheffer-Teixeira & Tort, 2016; Neves et al., 2022) |
+| 10A | Agregação do sinal por **área anatômica** (lida dinamicamente de `planilha_ratos_R1_R7.xlsx`, permitindo adicionar novos ratos sem alterar código) — a partir daqui as análises (Welch, harmônicas, espectrograma, centroide, PAC) passam a ser feitas por área, não por canal isolado |
+| 10B | PSD por Welch (Hanning, janela de 1s, 50% overlap, NFFT=1024) + potência por banda |
+| 10C | Centroide espectral (frequência contínua por canal/segundo) |
+| 10D | Detecção do pico Theta real e de suas harmônicas — controle metodológico para o PAC (flag de alerta quando uma harmônica cai na faixa de Slow Gamma, seguindo Scheffer-Teixeira & Tort, 2016; Neves et al., 2022) |
 | 11 | Espectrograma via Wavelet de Morlet |
 | 12 | *Phase-Amplitude Coupling* (PAC) Theta–Gama lento e Theta–Gama rápido — inspirado em Neves et al. (2022), que associaram o PAC Theta–Fast Gamma à discriminação bem-sucedida de objeto deslocado |
 | 13 | Z-score de potência por banda e por canal |
@@ -95,17 +95,17 @@ canais bons daquela área) e prefixadas pelo nome da área (ex.:
 | | `skewness` | Assimetria da distribuição |
 | | `pico_a_pico` | Amplitude pico-a-pico (max − min) |
 | | `pct_outlier_3s` | % de amostras além de 3 desvios-padrão da média |
-| **Potência espectral por banda** (Fase 10A, Welch) | `pot_delta` | Potência na banda Delta (1–4 Hz) |
+| **Potência espectral por banda** (Fase 10B, Welch) | `pot_delta` | Potência na banda Delta (1–4 Hz) |
 | | `pot_theta` | Potência na banda Theta (6–12 Hz) |
 | | `pot_beta` | Potência na banda Beta (13–30 Hz) |
 | | `pot_gamma_lento` | Potência na banda Gama Lento (25–55 Hz) |
 | | `pot_gamma_rapido` | Potência na banda Gama Rápido (65–110 Hz) |
-| **Razões entre bandas** (Fase 10A) | `theta_gamma_lento_ratio` | Razão Theta / Gama Lento |
+| **Razões entre bandas** (Fase 10B) | `theta_gamma_lento_ratio` | Razão Theta / Gama Lento |
 | | `theta_gamma_rapido_ratio` | Razão Theta / Gama Rápido |
 | | `delta_theta_ratio` | Razão Delta / Theta |
-| **Complexidade espectral** (Fase 10A) | `entropia_espectral` | Entropia espectral normalizada do PSD (0–1; mede o quão "espalhada" está a energia no espectro) |
-| **Frequência dominante** (Fase 10B) | `centroide_hz` | Centroide espectral — frequência média contínua (Hz), ponderada pela potência, na faixa 1–110 Hz |
-| **Controle metodológico do PAC** (Fase 10C) | `theta_peak_hz` | Frequência do pico espectral dominante dentro da banda Theta |
+| **Complexidade espectral** (Fase 10B) | `entropia_espectral` | Entropia espectral normalizada do PSD (0–1; mede o quão "espalhada" está a energia no espectro) |
+| **Frequência dominante** (Fase 10C) | `centroide_hz` | Centroide espectral — frequência média contínua (Hz), ponderada pela potência, na faixa 1–110 Hz |
+| **Controle metodológico do PAC** (Fase 10D) | `theta_peak_hz` | Frequência do pico espectral dominante dentro da banda Theta |
 | | `pac_sl_alerta_harmonicas` | Flag booleano: indica se uma harmônica (h3/h4) do pico Theta cai dentro da faixa de Gama Lento (±3 Hz) — usado para decidir qual PAC é mais confiável para reportar |
 | **Acoplamento Fase-Amplitude (PAC)** (Fase 12) | `pac_mi_theta_gamma_lento` | Índice de Modulação (MI, Tort et al. 2010) do acoplamento Theta (fase) → Gama Lento (amplitude) |
 | | `pac_mi_theta_gamma_rapido` | Índice de Modulação (MI) do acoplamento Theta (fase) → Gama Rápido (amplitude) — hipótese principal do TCC |
@@ -113,7 +113,7 @@ canais bons daquela área) e prefixadas pelo nome da área (ex.:
 | **Dinâmica temporal por trial** (Pós-pipeline) | `<feature>_tendencia` | Slope (inclinação) da regressão linear do z-score da feature ao longo do tempo dentro do trial — resume se a potência sobe ou desce durante a sessão; substitui as colunas `_zscore` por segundo no `features_all` final; não calculada para sessões `NOR` |
 
 > As colunas de potência (`pot_*`), razões e centroide são calculadas tanto no
-> nível "PSD médio da área" quanto, na Fase 10D, agregadas a partir do sinal
+> nível "PSD médio da área" quanto, na Fase 10A, agregadas a partir do sinal
 > médio dos canais bons de cada área — por isso os nomes finais em
 > `features_all` seguem o padrão `<área>_<feature>` (ex.: `CA3_pot_theta`,
 > `LEC_theta_gamma_rapido_ratio`, `PRH_pac_mi_theta_gamma_rapido`).
