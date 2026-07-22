@@ -1,0 +1,17 @@
+canal,ruim,rms,std,kurt,motivo,fonte
+1,True,51.89259764108121,51.89255421122421,34.70814356375068,"Anotação CSV: ""mudanças no sinal""",csv
+2,True,0.0,0.0,,"Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV) | Anotação CSV: ""mudanças no sinal""",csv+auto
+3,True,0.0,0.0,,"Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV) | Anotação CSV: ""mudanças no sinal""",csv+auto
+4,True,43.46593686769674,43.465907129891235,75.6324220652308,"Saturação/artefato extremo (kurtosis=75.6 > 50) | Anotação CSV: ""mudanças no sinal""",csv+auto
+5,True,35.29733863536735,35.29728176145824,10.547096722479878,"Anotação CSV: ""mudanças no sinal""",csv
+6,True,43.94537969852139,43.945335707416106,14.80094161569848,"Anotação CSV: ""mudanças no sinal""",csv
+7,True,49.96040856639504,49.947025436932456,212.9521258309927,"Saturação/artefato extremo (kurtosis=213.0 > 50) | Anotação CSV: ""mudanças no sinal""",csv+auto
+8,True,42.0816361567393,42.081600062837026,9.63808749873578,"Anotação CSV: ""mudanças no sinal""",csv
+9,True,64.36281056513353,64.36277015898112,18.075806052885547,"Anotação CSV: ""mudanças no sinal""",csv
+10,True,0.0,0.0,,"Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV) | Anotação CSV: ""mudanças no sinal""",csv+auto
+11,True,0.0,0.0,,"Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV) | Anotação CSV: ""mudanças no sinal""",csv+auto
+12,True,143.97090107977425,143.97086567273666,31.051797402883928,"Anotação CSV: ""mudanças no sinal""",csv
+13,True,61.4687267296551,61.46866482763017,81.64166787719729,"Saturação/artefato extremo (kurtosis=81.6 > 50) | Anotação CSV: ""mudanças no sinal""",csv+auto
+14,True,0.0,0.0,,"Canal morto (RMS=0.000 µV < 1 µV) | Variância nula (std=0.000 µV < 0.5 µV) | Anotação CSV: ""mudanças no sinal""",csv+auto
+15,True,55.68356618967724,55.68165136965994,7.906518767426222,"Anotação CSV: ""mudanças no sinal""",csv
+16,True,46.27951872850331,46.279517089433966,11.736285222197266,"Anotação CSV: ""mudanças no sinal""",csv
