@@ -1,0 +1,35 @@
+{
+  "stem": "r8_75_T3_241112_131327",
+  "shape": [
+    16,
+    407490
+  ],
+  "fs": 1000,
+  "dtype": "float32",
+  "descricao": "Sinal LFP downsampled [N_CANAIS x N_amostras] float32",
+  "rato": "R8",
+  "condicao": "0.75",
+  "trial": "T3",
+  "acontencimento": "não explorou, demorou a sair",
+  "canais_bons": [
+    7
+  ],
+  "canais_ativos_hardware": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}
