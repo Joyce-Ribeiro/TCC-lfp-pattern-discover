@@ -15,7 +15,7 @@ R5 - Sessao 50% - falta areas: nenhuma
 R5 - Sessao 75% - falta areas: nenhuma
 R7 - Sessao 25% - T3: CA3b
 R7 - Sessao 50% - T2: SEM ARQUIVO | T3: SEM ARQUIVO | T4: SEM ARQUIVO
-R7 - Sessao 75% - T1: CA3b | T2: CA3b
+R7 - Sessao 75% - T1: CA3b | T2: SEM ARQUIVO
 R8 - Sessao 25% - falta areas: nenhuma
 R8 - Sessao 50% - SEM ARQUIVO (T1: SEM ARQUIVO | T2: SEM ARQUIVO | T3: SEM ARQUIVO | T4: SEM ARQUIVO)
 R8 - Sessao 75% - T3: CA3c, DGD, DGV

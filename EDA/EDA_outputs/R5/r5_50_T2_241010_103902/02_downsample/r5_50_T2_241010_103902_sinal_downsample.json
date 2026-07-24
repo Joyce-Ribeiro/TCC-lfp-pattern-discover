@@ -10,7 +10,7 @@
   "rato": "R5",
   "condicao": "0.5",
   "trial": "T2",
-  "acontencimento": "derrubou objeto ",
+  "acontencimento": "derrubou objeto",
   "canais_bons": [
     0,
     2,

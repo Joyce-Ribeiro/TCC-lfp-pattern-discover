@@ -10,7 +10,7 @@
   "rato": "R2",
   "condicao": "NOR",
   "trial": "T2",
-  "acontencimento": "Roeu o objeto ",
+  "acontencimento": "Roeu o objeto",
   "canais_bons": [
     0,
     1,
